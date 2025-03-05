@@ -1,0 +1,73 @@
+.br{
+    border: 3px solid rgb(255, 0, 0);
+}
+
+.event-banner{
+    background-image: url('../images/contact/contactbanner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    width: 100%;
+
+    position: inherit !important;
+    height: 300px;
+    margin-top: 95px;
+}
+.event-banner-text{
+    text-align: center;
+    color: white;
+}
+.event-banner-text h1{
+    font-size: 4rem; 
+}
+.event-banner-text a, .event-banner-text p{
+    font-size: 1.2rem; 
+    color: white;
+}
+.event-banner-text a:hover{
+    color: white;
+}
+
+.event-img{
+    width: 100%;
+    height: 25rem;
+    background-image: url('../images/index/banner1.jpg');
+    background-size: cover !important;
+    background-position: 0% 24%;
+
+
+}
+.event-info{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 0 0 30px 0 !important;
+}
+.event-info a{
+    color: #007185 !important;
+    text-decoration: none;
+}
+.container img {
+    width: 100%;
+}
+.col-lg-9, .col-lg-3{
+    padding: 10px 20px !important;
+}
+.accordion-button:not(.collapsed), .accordion-button {
+    background-color:#f5f5f5 !important;
+}
+
+.event-info .bi-twitter{
+    color: white;
+    font-size: 1.5rem;
+    border: 2px solid #2a60c6;
+    border-radius: 50%;
+    padding: 4px 8px 4px 8px;
+    background-color:#1d9bf0;
+}
+.event-info .bi-facebook{
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid #2a60c6;
+    padding: 4px 8px 4px 8px;
+    background-color:#036ce4;
+}

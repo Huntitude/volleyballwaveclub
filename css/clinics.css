@@ -1,0 +1,41 @@
+.br{
+    border: 3px solid rgb(255, 0, 0);
+}
+.clinics-info a {
+    color: #007185 !important;
+    text-decoration: none;
+}
+.clinics-banner{
+    background-image: url('../images/contact/contactbanner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    width: 100%;
+
+    position: inherit !important;
+    height: 300px;
+    margin-top: 95px;
+}
+.clinics-banner-text{
+    text-align: center;
+    color: white;
+}
+.clinics-banner-text h1{
+    font-size: 4rem; 
+}
+.clinics-banner-text a, .clinics-banner-text p{
+    font-size: 1.2rem; 
+    color: white;
+}
+.clinics-banner-text a:hover{
+    color: white;
+}
+
+.heading-gradient{
+    background-image: linear-gradient(to right, #256fbb, #edc453);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+

@@ -1,0 +1,69 @@
+@font-face {
+    font-family: PtSerif;
+    src: url(../fonts/PT_Serif/PTSerif-Regular.ttf);
+}
+@font-face {
+    font-family: MerriweatherBold;
+    src: url(../fonts/Merriweather/Merriweather-Bold.ttf);
+}
+@font-face{
+    font-family: Merriweather;
+    src: url(../fonts/Merriweather/Merriweather-Regular.ttf);
+}
+
+*{
+    font-family: Merriweather;
+}
+
+/* Nav Bar Styling */
+header{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.493);
+}
+.navbar a{
+    text-decoration: none !important;
+}
+.navbar{
+    background-color: white !important;
+}
+
+.nav-wl{
+    /* color: #2777c9; */
+    color: #3c55ba;
+    font-size: 2rem;
+}
+.nav-l{
+    /* color: #eec553; */
+    color: black;
+}
+.navbar-nav{
+    margin-right: 30px;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link.active{
+    color: #3c55ba !important;
+
+}
+
+.nav-l, .nav-wl {
+    margin-left: 20px;
+}
+
+@media (max-width: 1200px)
+{
+    .nav-wl{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1080px)
+{
+    .nav-wl, .nav-l{
+        display: none;
+    }
+}

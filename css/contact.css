@@ -1,0 +1,62 @@
+.br{
+    border: 3px solid rgb(255, 0, 0);
+}
+
+.contact-banner{
+    background-image: url('../images/contact/contactbanner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    width: 100%;
+    
+    position: inherit !important;
+    height: 300px;
+    margin-top: 95px;
+}
+.contact-banner-text{
+    text-align: center;
+    color: white;
+}
+.contact-banner-text h1{
+    font-size: 4rem; 
+}
+.contact-banner-text a, .contact-banner-text p{
+    font-size: 1.2rem; 
+    color: white;
+}
+.contact-banner-text a:hover{
+    color: white;
+}
+.contact-info a{
+    color: #007185 !important;
+    text-decoration: none;
+}
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #1a6b93;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    margin-bottom: 20px;
+}
+.bi{
+    color: white;
+    font-size: 20px;
+}
+.dbox p{
+    font-size: 1rem;
+}
+
+.contact-info .col-md-7, .contact-info .row{
+    background-color: #e8edf0;
+}
+
+#form-message-warning, #form-message-success{
+    display: none;
+}
+form label {
+    margin: 10px 10px;
+}
+textarea{
+    resize: none !important;
+}

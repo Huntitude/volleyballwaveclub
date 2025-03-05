@@ -1,0 +1,59 @@
+.br{
+    border: 3px solid rgb(255, 0, 0);
+}
+
+.coaches-banner{
+    background-image: url('../images/contact/contactbanner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    width: 100%;
+    
+    position: inherit !important;
+    height: 300px;
+    margin-top: 95px;
+}
+.coaches-banner-text{
+    text-align: center;
+    color: white;
+}
+.coaches-banner-text h1{
+    font-size: 4rem; 
+}
+
+.coaches-banner-text a, .coaches-banner-text p{
+    font-size: 1.2rem; 
+    color: white;
+}
+.coaches-banner-text a:hover{
+    color: white;
+}
+
+.heading-gradient{
+    background-image: linear-gradient(to right, #256fbb, #edc453);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+.card{
+    border: 5px solid #3c55ba !important;
+    display: inline-block;
+    margin-top: 6rem;
+
+}
+.card img{
+    border-radius: 50%;
+    border: 6px solid #3c55ba !important;
+    box-shadow: 0 16px 38px -12px rgb(0 0 0 / 56%), 0 4px 25px 0px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+    margin: -50px 0 0 0;
+    width: 10rem;
+    height: 10rem;
+}
+.bio{
+    overflow-y: auto;
+    height: 400px;
+}
+.bio::-webkit-scrollbar{
+    width: 5px;
+}
