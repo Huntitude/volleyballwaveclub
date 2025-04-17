@@ -1,0 +1,359 @@
+
+/* Ensure the body and html take up full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light background */
+}
+.br{
+    border: 1px solid red;
+}
+
+.navbar{
+    font-size: 1.3rem;
+    border-bottom: 2px solid #1a3c5e; /* Dark blue border */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0 0 !important;
+    background-color: #fff;
+}
+.navbar-expand-md .navbar-nav .dropdown-menu{
+    font-size: 1.3rem;
+}
+.navbar img{
+    width: 180px;
+    height: 70px;
+}
+.navbar-brand {
+    margin-left: 4rem !important;
+}
+
+.navbar-expand-md .navbar-collapse {
+    margin-right: 42px;
+
+}
+
+.coaches-banner{
+    background-image: url('../images/bgbanner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    width: 100%;
+    position: inherit !important;
+    height: 300px;
+    margin-top: 70px;
+}
+.coaches-banner-text{
+    text-align: center;
+    color: white;
+}
+.coaches-banner-text h1{
+    font-size: 4rem; 
+}
+
+.heading-gradient{
+    background-image: linear-gradient(to right, #256fbb, #edc453);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.col {
+    position: relative !important;
+}
+.coaches-section {
+    background-color: #f8f9fa; /* Light background to match site */
+    margin-bottom: 8rem;
+}
+.coaches-section .section-heading {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.coaches-section .section-heading h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a3c5e; /* Dark blue to match theme */
+    margin-bottom: 0.5rem;
+}
+.coaches-section .section-heading p {
+    font-size: 1.25rem;
+    color: #6c757d; /* Gray for subtitle */
+    margin-bottom: 0;
+}
+.coaches-section .coach-card {
+    position: relative;
+    background-color: #fff;
+    border: 2px solid #194a73;
+    border-radius: 10px;
+    padding: 150px 1.5rem 1.5rem; /* Space for wrapper/image at top */
+    text-align: center;
+    transition: transform 0.3s ease;
+    height: 600px; /* Fixed height for all cards - adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute content evenly */
+    margin-bottom: 2rem;
+}
+.coaches-section .coach-card:hover {
+    transform: translateY(-5px); /* Subtle lift effect on hover */
+}
+.coaches-section .coach-card .image-wrapper {
+    width: 216px; /* Matches scaled image size */
+    height: 216px; /* Matches scaled image size */
+    position: absolute;
+    top: -40px; /* Fixed at top of card */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Precise centering */
+    overflow: hidden; /* Clip image to wrapper bounds */
+    border-radius: 50%; /* Circular frame */
+    -webkit-box-shadow: 0px 0px 26px -10px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 26px -10px rgba(0,0,0,1);
+    box-shadow: 0px 0px 26px -10px rgba(0,0,0,1);
+    background: linear-gradient(180deg, rgba(11,54,91,1) 0%, rgba(94,171,232,1) 100%);
+    border: 3px solid #194a73;
+
+}
+.coaches-section .coach-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    position: absolute;
+}
+.coaches-section .coach-card:nth-child(1) img {top: 30px; left: 42px; transform: scale(2);}
+.coaches-section .col:nth-child(2) .coach-card img {top: 98px; left: 40px; transform: scale(1.6);}
+.coaches-section .col:nth-child(3) .coach-card img {top: 15px; left: 44px; transform: scale(2.4);}
+.coaches-section .col:nth-child(4) .coach-card img {top: 68px; left: 46px; transform: scale(1.8);}
+.coaches-section .col:nth-child(5) .coach-card img {top: 23px; left: 54px; transform: scale(2.2);}
+.coaches-section .col:nth-child(6) .coach-card img {top: 26px; left: 52px; transform: scale(2.1);}
+.coaches-section .col:nth-child(7) .coach-card img {top: 10px; left: 44px; transform: scale(3);}
+.coaches-section .col:nth-child(8) .coach-card img {top: 58px; left: 45px; transform: scale(2);}
+.coaches-section .col:nth-child(9) .coach-card img {top: 80px; left: 45px; transform: scale(1.3);}
+.coaches-section .col:nth-child(10) .coach-card img {top: 100px; left: 45px; transform: scale(2);}
+.coaches-section .col:nth-child(11) .coach-card img {top: 100px; left: 45px; transform: scale(2);}
+
+
+
+
+.coaches-section .coach-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a3c5e;
+    margin-top: 3rem;
+    margin-bottom: .5rem;
+}
+.coaches-section .coach-card p.title {
+    font-size: 1rem;
+}
+.card-bio {
+    max-height: 300px; /* Limit bio height */
+    overflow-y: auto; /* Scroll if bio exceeds height */
+    overflow-x: hidden;
+    flex-grow: 1; /* Allow bio to take available space */
+}
+
+.coaches-section .coach-card p.bio {
+    font-size: 0.9rem;
+    color: #000000;
+    line-height: 1.6;
+    text-align: left;
+    margin: 0; /* Remove default margins */
+}
+
+.coaches-section .coach-card .cardfooter {
+    margin-top: auto; /* Push footer to bottom */
+}
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .coaches-section .coach-card {
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+/* Footer style */
+#waves {
+	position: relative;
+	background: linear-gradient(to bottom, rgba(207, 231, 250, 0) 0%,rgb(56, 120, 180) 100%); 
+	overflow: hidden;
+	width: 100%;
+	height: 150px;
+	margin-bottom: -300px;
+    margin-top: 74px;
+	z-index: -1;
+}
+.wave {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url("../images/wave.png");
+	opacity: 1;
+	background-size: 1000px 100px;
+}
+
+.wave.wave1{
+	animation: wave1 30s linear infinite;
+	z-index: 1;
+	opacity: 1;
+	animation-delay: 0s;
+	bottom: 0;
+    border-bottom: #3878b405 solid 1px;
+} 
+@keyframes wave1
+{
+	0%{
+		background-position-x: 0;
+	}
+	100%{
+		background-position-x: 1000px;
+	}
+}
+.wave.wave2{
+	animation: wave2 15s linear infinite;
+	z-index: 3;
+	opacity: 0.5;
+	animation-delay: -5s;
+	bottom: 10px;
+} 
+@keyframes wave2
+{
+	0%{background-position-x: 0;}
+	100%{background-position-x: -1000px;}
+}
+.wave.wave3{
+	animation: wave3 15s linear infinite;
+	z-index: 1;
+	opacity: 0.3;
+	animation-delay: -2s;
+	bottom: 20px;
+} 
+@keyframes wave3
+{
+	0%{background-position-x: 0;}
+	100%{background-position-x: -3000px;}
+}
+
+#footer {
+	position: relative;
+	width: 100%;
+	height: auto;
+	display: flex;
+	/* background: linear-gradient(to bottom, rgba(207, 231, 250, 0.281) 0%,rgba(0,98,191,1) 100%);  */
+	/* background: linear-gradient(to bottom, #ffffff00 0%,rgba(0,98,191,1) 100%); */
+    background: linear-gradient(to bottom, #cae2ff00 0%, rgb(0 98 191) 100%);
+
+    /* background-color: #f8f9fa;  */
+
+
+}
+.footer .container{
+    margin-top: 20rem;
+    max-width: 1450px;
+}
+.footer h3{
+    font-size: 2em;
+    margin-left: 1rem;
+    font-weight: 600;
+    color: white;
+}
+.footer .container{
+    margin-top: 20rem;
+    max-width: 1600px;
+}
+.footer a{
+    color: white;
+}
+
+/* ------  */
+
+.footer {
+    color: white;
+}
+.footer-logo img {
+    max-width: 20%; /* Adjust logo size */
+    margin-right: 2rem; /* Space between logo and text */
+}
+.footer-logo h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+.footer .btn-primary {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 50px; /* Rounded button to match example */
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    font-weight: 400;
+}
+.footer-links h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover {
+    color: #3353b9; /* Lighter blue on hover */
+}
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-bottom a:hover {
+    color: #3353b9; /* Lighter blue on hover */
+}
+.footer-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-ul li {
+    display: inline-block;
+}
+.footer-ul a {
+    color: white; /* Gray text */
+    transition: color 0.3s ease;
+}
+.footer-ul a:hover {
+    color: #3353b9; /* Lighter blue on hover */
+}
+.footer-ul i {
+    font-size: 1.25rem; /* Smaller icons for footer */
+}
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .footer .col-lg-4 {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .footer-logo {
+        justify-content: center;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-bottom .text-start {
+        margin-bottom: 1rem;
+    }
+    .footer-logo img{
+        display: none;
+    }
+    .footer .btn-primary {
+        display: none;
+    }
+    .col-md-8 {
+        width: 100% !important;
+    }
+
+}

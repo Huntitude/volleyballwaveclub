@@ -1,0 +1,303 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.br{
+    border: 1px solid red;
+}
+
+.navbar{
+    font-size: 1.3rem;
+    border-bottom: 2px solid #1a3c5e; /* Dark blue border */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0 0 !important;
+    background-color: #fff;
+}
+.navbar-expand-md .navbar-nav .dropdown-menu{
+    font-size: 1.3rem;
+}
+.navbar img{
+    width: 180px;
+    height: 70px;
+}
+.navbar-brand {
+    margin-left: 4rem !important;
+}
+
+.navbar-expand-md .navbar-collapse {
+    margin-right: 42px;
+
+}
+
+main{
+    flex: 1 0 auto;
+}
+.forms-banner{
+    background-image: url('../images/bgbanner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    width: 100%;
+    position: inherit !important;
+    height: 300px;
+    margin-top: 70px;
+    margin-bottom: 3rem;
+}
+.forms-banner-text{
+    text-align: center;
+    color: white;
+}
+.forms-banner-text h1{
+    font-size: 4rem; 
+}
+
+.heading-gradient{
+    background-image: linear-gradient(to right, #256fbb, #edc453);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.forms-section .container .text-center {
+    margin-bottom: 4rem;
+}
+.form-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.form-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #dcf0ff; /* Keep this if your image is transparent; remove if not needed */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.form-item a{
+    text-decoration: none;
+}
+.form-icon img {
+    width: 40px; /* Adjust size to fit within the circle */
+    height: 40px;
+    object-fit: contain; /* Ensures the image scales properly without distortion */
+}
+.form-text h5 {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+.form-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .form-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-icon {
+        margin-bottom: 15px;
+        margin-right: 0;
+        display: none;
+    }
+}
+
+
+
+#waves {
+    position: relative;
+    background: linear-gradient(to bottom, rgba(207, 231, 250, 0) 0%, rgb(56, 120, 180) 100%);
+    width: 100%;
+    height: 150px; /* Keep this, but allow flexibility */
+    min-height: 100px; /* Minimum height to prevent collapse */
+    overflow: hidden; /* Keep this to contain waves */
+    margin-top: 74px;
+    z-index: 0;
+}
+.wave {
+	position: absolute;
+	bottom: 0;
+    top: 30px;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url("../images/wave.png");
+	opacity: 1;
+	background-size: 1000px 100px;
+}
+
+.wave.wave1{
+	animation: wave1 30s linear infinite;
+	z-index: 1;
+	opacity: 0.5;
+	animation-delay: 0s;
+	bottom: 0;
+    border-bottom: #3878b405 solid 1px;
+} 
+@keyframes wave1
+{
+	0%{
+		background-position-x: 0;
+	}
+	100%{
+		background-position-x: 1000px;
+	}
+}
+.wave.wave2{
+	animation: wave2 15s linear infinite;
+	z-index: 3;
+	opacity: 0.5;
+	animation-delay: -5s;
+	bottom: 10px;
+} 
+@keyframes wave2
+{
+	0%{background-position-x: 0;}
+	100%{background-position-x: -1000px;}
+}
+.wave.wave3{
+	animation: wave3 15s linear infinite;
+	z-index: 1;
+	opacity: 0.3;
+	animation-delay: -2s;
+	bottom: 20px;
+} 
+@keyframes wave3
+{
+	0%{background-position-x: 0;}
+	100%{background-position-x: -3000px;}
+}
+
+#footer {
+    position: relative;
+    width: 100%;
+    /* height: auto; */
+    display: flex;
+    /* background: linear-gradient(to bottom, #cae2ff 0%, rgb(0 98 191) 100%); */
+    background: linear-gradient(to bottom, #cae2ff9c 0%, rgb(0 98 191) 100%);
+
+    flex-shrink: 0; /* Prevent footer from shrinking */
+    z-index: 0; /* Ensure footer content is above waves */
+}
+.footer .container {
+    max-width: 1450px;
+    padding: 0 3rem 2rem 3rem;
+    padding-bottom: 2rem;
+    margin-top: 5rem;
+    max-width: 1600px;
+}
+.footer h3{
+    font-size: 2em;
+    margin-left: 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.footer a{
+    color: white;
+}
+
+/* ------  */
+
+.footer {
+    color: white;
+}
+.footer-logo img {
+    max-width: 20%; /* Adjust logo size */
+    margin-right: 2rem; /* Space between logo and text */
+}
+.footer-logo h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+.footer .btn-primary {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 50px; /* Rounded button to match example */
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    font-weight: 400;
+}
+.footer-links h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover {
+    color: #3353b9; /* Lighter blue on hover */
+}
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-bottom a:hover {
+    color: #3353b9; /* Lighter blue on hover */
+}
+.footer-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-ul li {
+    display: inline-block;
+}
+.footer-ul a {
+    color: white; /* Gray text */
+    transition: color 0.3s ease;
+}
+.footer-ul a:hover {
+    color: #3353b9; /* Lighter blue on hover */
+}
+.footer-ul i {
+    font-size: 1.25rem; /* Smaller icons for footer */
+}
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .footer .col-lg-4 {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .footer-logo {
+        justify-content: center;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-bottom .text-start {
+        margin-bottom: 1rem;
+    }
+    .footer-logo img{
+        display: none;
+    }
+    .footer .btn-primary {
+        display: none;
+    }
+    .col-md-8 {
+        width: 100% !important;
+    }
+
+}
