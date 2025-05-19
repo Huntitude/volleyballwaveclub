@@ -330,6 +330,7 @@ html, body {
 .footer-ul i {
     font-size: 1.25rem; /* Smaller icons for footer */
 }
+
 /* Responsive Adjustments */
 @media (max-width: 991.98px) {
     .footer .col-lg-4 {
@@ -355,5 +356,8 @@ html, body {
     .col-md-8 {
         width: 100% !important;
     }
+    .footer-contact{
+    margin-left: -10rem;
+}
 
 }

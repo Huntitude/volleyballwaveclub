@@ -128,19 +128,31 @@ body {
     display: block;
     color: #007bff;
 }
-.step-list {
+.list-unstyled {
     padding-left: 20px;
 }
-.step-list li {
+.list-unstyled li {
     margin-bottom: 10px;
 }
-.container-fluid .step-list span{
+.container-fluid .list-unstyled span{
     color: blue;
     font-weight: 600;
 }
 
+/* Adjust based on your navbar height */
+[id^="step"] {
+    scroll-margin-top: 100px; 
+}
 
+.list-unstyled img {
+    filter: grayscale(100%) brightness(0);
+    padding-bottom: 1px;
 
+}
+
+ul li i {
+    vertical-align: middle;
+}
 
 #waves {
     position: relative;
@@ -269,6 +281,7 @@ body {
 .footer-links a:hover {
     color: #3353b9; /* Lighter blue on hover */
 }
+
 .footer-bottom a {
     color: white;
     text-decoration: none;
@@ -320,6 +333,9 @@ body {
     .col-md-8 {
         width: 100% !important;
     }
+        .footer-contact{
+        margin-left: -10rem;
+}
 
 }
 
