@@ -510,6 +510,10 @@ hr:before { /* Not really supposed to work, but does */
     text-decoration: none;
     transition: color 0.3s ease;
 }
+.footer-links a:first-child img {
+    width: 160px; 
+    height: auto; /
+}
 .footer-links a:hover {
     color: #3353b9; /* Lighter blue on hover */
 }
