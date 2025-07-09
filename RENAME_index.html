@@ -320,66 +320,56 @@
                         <div class="contact-form ">
 
                             <!-- form control validation -->
-                            <form id="contactForm" class=" needs-validation" action="https://submit-form.com/beI6uTAtH" method="POST" novalidate>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="validationName" class="form-label">Full Name</label>
-                                        <input type="text" class="form-control" name="name" id="validationName" placeholder="Your Name" required>
-                                        <div class="valid-feedback">
-                                            Looks good!
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid name.
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="validationEmail" class="form-label">Email Address</label>
-                                        <input id="validationEmail" type="email" name="email" class="form-control" placeholder="Email" required>
-                                        <div class="valid-feedback">
-                                            Looks good!
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid email.
-                                        </div>
-                                    </div>
+                            <!-- <form id="contactForm" class=" needs-validation" action="https://formspree.io/f/xwpbdgqn" method="POST" novalidate> -->
+                        <form id="contactForm" class="needs-validation" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" name="name" id="validationName" placeholder="Your Name" required>
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">Please provide a valid name.</div>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="validationSubject" class="form-label">Subject</label>
-                                    <input id="validationSubject" type="text" name="subject" class="form-control" placeholder="Subject" required>
-                                    <div class="valid-feedback">
-                                    Looks good!
-                                    </div>
-                                    <div class="invalid-feedback">
-                                    Please provide a subject.
-                                    </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationEmail" class="form-label">Email Address</label>
+                                    <input id="validationEmail" type="email" name="email" class="form-control" placeholder="Email" required>
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">Please provide a valid email.</div>
                                 </div>
-                                <div class="mb-3">
-                                    <textarea class="form-control" rows="5" name="message" placeholder="Message" required></textarea>
-                                    <div class="invalid-feedback">
-                                        Please write something to us.
-                                    </div>
-                                </div>
-                                    <button class="btn btn-primary" type="submit">Send Message</button>
-                            </form>
+                            </div>
+                            <div class="mb-3">
+                                <label for="validationSubject" class="form-label">Subject</label>
+                                <input id="validationSubject" type="text" name="subject" class="form-control" placeholder="Subject" required>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Please provide a subject.</div>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="5" name="message" placeholder="Message" required></textarea>
+                                <div class="invalid-feedback">Please write something to us.</div>
+                            </div>
+                                <input type="text" name="_honey" style="display:none">
+                                <input type="hidden" name="_captcha" value="false">
+                                <button class="btn btn-primary" type="submit">Send Message</button>
+                        </form>
+
+                            <!-- Form Submission Success Modal -->
+                            
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Thank You Modal -->
-            <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouLabel" aria-hidden="true">
+            <div class="modal fade" id="thankYouModal" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="thankYouLabel">Message Sent</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            ✅ Thank you! Your message has been sent successfully.
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
+                    <div class="modal-content p-4 text-center">
+                    <div class="checkmark-wrapper mb-3">
+                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14 27l7 7 16-16" />
+                        </svg>
+                    </div>
+                    <h5 class="modal-title">Thank You!</h5>
+                    <p>Your message has been sent.</p>
                     </div>
                 </div>
             </div>

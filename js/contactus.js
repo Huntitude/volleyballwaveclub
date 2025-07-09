@@ -14,58 +14,37 @@
 })();
 
 
-
-document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contactForm');
-  const thankYouModalEl = document.getElementById('thankYouModal');
+  const modal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+  const actionURL = "https://formsubmit.co/ajax/director@wavevolleyball.net"; // Updated to use AJAX endpoint
 
-  if (form && thankYouModalEl) {
-    const thankYouModal = new bootstrap.Modal(thankYouModalEl);
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
 
-    
-    thankYouModalEl.addEventListener('hidden.bs.modal', () => {
-      const backdrop = document.querySelector('.modal-backdrop');
-      if (backdrop) backdrop.remove();
+    if (!form.checkValidity()) {
+      form.classList.add('was-validated');
+      return;
+    }
 
-      document.body.classList.remove('modal-open');
-      document.body.style.paddingRight = '';
-    });
+    const formData = new FormData(form);
 
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-
-      const formData = new FormData(form);
-
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: { Accept: 'application/json' }
-        });
-
-        if (response.ok) {
-          form.reset();
-          thankYouModal.show();
-
-          // ⏳ Optional: auto-close modal after 5 seconds
-          setTimeout(() => {
-            thankYouModal.hide();
-
-            const backdrop = document.querySelector('.modal-backdrop');
-            if (backdrop) backdrop.remove();
-
-            document.body.classList.remove('modal-open');
-            document.body.style.paddingRight = '';
-          }, 5000);
-
-        } else {
-          alert('❌ Something went wrong. Please try again.');
+    try {
+      const response = await fetch(actionURL, {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
         }
-      } catch (error) {
-        alert('❌ Error: Could not submit form.');
+      });
+
+      if (response.ok) {
+        form.reset();
+        form.classList.remove('was-validated');
+        modal.show();
+      } else {
+        alert('Error: Submission failed.');
       }
-    });
-  }
-});
-
-
+    } catch (error) {
+      alert('Error: Could not reach the server.');
+    }
+  });
