@@ -15,8 +15,9 @@
 
 
   const form = document.getElementById('contactForm');
-  const modal = new bootstrap.Modal(document.getElementById('thankYouModal'));
-  const actionURL = "https://formsubmit.co/ajax/director@wavevolleyball.net"; // Updated to use AJAX endpoint
+  const modalEl = document.getElementById('thankYouModal');
+  const modal = new bootstrap.Modal(modalEl);
+  const actionURL = "https://formsubmit.co/ajax/director@wavevolleyball.net";
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -40,7 +41,21 @@
       if (response.ok) {
         form.reset();
         form.classList.remove('was-validated');
+
         modal.show();
+
+        let seconds = 5;
+        const countdownSpan = modalEl.querySelector('#countdown');
+        countdownSpan.textContent = seconds;
+
+        const interval = setInterval(() => {
+          seconds--;
+          countdownSpan.textContent = seconds;
+          if (seconds <= 0) {
+            clearInterval(interval);
+            modal.hide();
+          }
+        }, 1000);
       } else {
         alert('Error: Submission failed.');
       }
