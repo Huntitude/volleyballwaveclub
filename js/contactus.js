@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (form && thankYouModalEl) {
     const thankYouModal = new bootstrap.Modal(thankYouModalEl);
 
-    // ⛳️ Optional: cleanup for manual close
+    
     thankYouModalEl.addEventListener('hidden.bs.modal', () => {
       const backdrop = document.querySelector('.modal-backdrop');
       if (backdrop) backdrop.remove();
