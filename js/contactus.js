@@ -29,6 +29,9 @@
 
     const formData = new FormData(form);
 
+    // Prevent email threading by using a unique subject
+    formData.append("_subject", `Wave Volleyball Club Contact Form – ${new Date().toLocaleString()}`);
+
     try {
       const response = await fetch(actionURL, {
         method: "POST",

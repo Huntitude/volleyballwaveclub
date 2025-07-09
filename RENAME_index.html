@@ -319,8 +319,6 @@
                     <div class="col-md-8 mx-auto">
                         <div class="contact-form ">
 
-                            <!-- form control validation -->
-                            <!-- <form id="contactForm" class=" needs-validation" action="https://formspree.io/f/xwpbdgqn" method="POST" novalidate> -->
                         <form id="contactForm" class="needs-validation" novalidate>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
@@ -348,10 +346,10 @@
                             </div>
                                 <input type="text" name="_honey" style="display:none">
                                 <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_subject" value="New Message - ${Date.now()}">
                                 <button class="btn btn-primary" type="submit">Send Message</button>
                         </form>
 
-                            <!-- Form Submission Success Modal -->
                             
                         </div>
                     </div>
@@ -359,21 +357,21 @@
             </div>
 
             <!-- Thank You Modal -->
-<div class="modal fade" id="thankYouModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content p-4 text-center">
-      <div class="checkmark-wrapper mb-3">
-        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-          <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
-          <path class="checkmark__check" fill="none" d="M14 27l7 7 16-16" />
-        </svg>
-      </div>
-      <h5 class="modal-title">Thank You!</h5>
-      <p>Your message has been sent.</p>
-      <p class="text-muted small">You may close this window or it will automatically close in <span id="countdown">5</span> seconds.</p>
-    </div>
-  </div>
-</div>
+            <div class="modal fade" id="thankYouModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content p-4 text-center">
+                    <div class="checkmark-wrapper mb-3">
+                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14 27l7 7 16-16" />
+                        </svg>
+                    </div>
+                    <h5 class="modal-title">Thank You!</h5>
+                    <p>Your message has been sent.</p>
+                    <p class="text-muted small">You may close this window or it will automatically close in <span id="countdown">5</span> seconds.</p>
+                    </div>
+                </div>
+            </div>
 
         </section>
 
