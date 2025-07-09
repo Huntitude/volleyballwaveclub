@@ -149,25 +149,13 @@ header p {
 }
 
 .clinics h2 {
-    font-size: 22px;
     color: #1a3c5e;
     margin-bottom: 10px;
 }
 
-.clinics .updated {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.clinics h3 {
-    font-size: 22px;
-    color: #1a3c5e;
-    margin: 20px 0 10px;
-}
 
 .clinics p {
-    font-size: 16px;
+    font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
@@ -177,7 +165,7 @@ header p {
 }
 
 .clinics ul li {
-    font-size: 16px;
+    font-size: 1.1rem;
     margin-bottom: 5px;
     position: relative;
     padding-left: 20px;

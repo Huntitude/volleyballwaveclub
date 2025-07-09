@@ -93,15 +93,10 @@ main{
     height: 40px;
     object-fit: contain; /* Ensures the image scales properly without distortion */
 }
-.form-text h5 {
-    font-weight: bold;
-    margin-bottom: 5px;
-    font-size: 1.3rem;
-}
+
 .form-text p {
     margin: 0;
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 1.1rem;
 }
 /* Responsive adjustments */
 @media (max-width: 576px) {
