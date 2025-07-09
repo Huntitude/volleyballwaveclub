@@ -15,31 +15,37 @@
 
 
 
-const form = document.getElementById('contactForm');
-const thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contactForm');
+  const thankYouModalEl = document.getElementById('thankYouModal');
 
-form.addEventListener('submit', async function (e) {
-  e.preventDefault(); // Prevent default form submit
+  // Only run if both form and modal exist
+  if (form && thankYouModalEl) {
+    const thankYouModal = new bootstrap.Modal(thankYouModalEl);
 
-  const formData = new FormData(form);
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
 
-  try {
-    const response = await fetch(form.action, {
-      method: 'POST',
-      body: formData,
-      headers: { Accept: 'application/json' }
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { Accept: 'application/json' }
+        });
+
+        if (response.ok) {
+          form.reset();
+          thankYouModal.show();
+        } else {
+          alert('❌ Something went wrong. Please try again.');
+        }
+      } catch (error) {
+        alert('❌ Error: Could not submit form.');
+      }
     });
-
-    if (response.ok) {
-      form.reset();
-      thankYouModal.show(); // Show Bootstrap modal
-    } else {
-      alert('Something went wrong. Please try again.');
-    }
-  } catch (error) {
-    alert('Error: Could not submit form.');
   }
 });
-
 
 
