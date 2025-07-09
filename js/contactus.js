@@ -19,9 +19,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contactForm');
   const thankYouModalEl = document.getElementById('thankYouModal');
 
-  // Only run if both form and modal exist
   if (form && thankYouModalEl) {
     const thankYouModal = new bootstrap.Modal(thankYouModalEl);
+
+    // ⛳️ Optional: cleanup for manual close
+    thankYouModalEl.addEventListener('hidden.bs.modal', () => {
+      const backdrop = document.querySelector('.modal-backdrop');
+      if (backdrop) backdrop.remove();
+
+      document.body.classList.remove('modal-open');
+      document.body.style.paddingRight = '';
+    });
 
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
@@ -38,6 +46,18 @@ document.addEventListener('DOMContentLoaded', function () {
         if (response.ok) {
           form.reset();
           thankYouModal.show();
+
+          // ⏳ Optional: auto-close modal after 5 seconds
+          setTimeout(() => {
+            thankYouModal.hide();
+
+            const backdrop = document.querySelector('.modal-backdrop');
+            if (backdrop) backdrop.remove();
+
+            document.body.classList.remove('modal-open');
+            document.body.style.paddingRight = '';
+          }, 5000);
+
         } else {
           alert('❌ Something went wrong. Please try again.');
         }
