@@ -17,7 +17,7 @@
   const form = document.getElementById('contactForm');
   const modalEl = document.getElementById('thankYouModal');
   const modal = new bootstrap.Modal(modalEl);
-  const actionURL = "https://formsubmit.co/ajax/paul.velet@gmail.com";
+  const actionURL = "https://formsubmit.co/ajax/paul.velet@gmail.com"; // wavevolleyball's link'
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();

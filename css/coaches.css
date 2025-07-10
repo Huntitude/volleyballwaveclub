@@ -71,7 +71,6 @@ html, body {
     margin-bottom: 5rem;
 }
 .coaches-section .section-heading h1 {
-    font-size: 3rem;
     font-weight: 700;
     color: #1a3c5e; /* Dark blue to match theme */
     margin-bottom: 0.5rem;
@@ -360,8 +359,5 @@ html, body {
     .col-md-8 {
         width: 100% !important;
     }
-    .footer-contact{
-    margin-left: -10rem;
-}
 
 }
